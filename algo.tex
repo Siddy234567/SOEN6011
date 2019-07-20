@@ -1,0 +1,134 @@
+\documentclass{article}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+\begin{document}
+\begin{algorithm}
+
+\caption{Calculate tangent Function using sin function}
+
+\textbf{Require:}  value: $-\infty<x<\infty$\\
+\textbf{Ensure:} $result = \tan(x)$
+\begin{algorithmic}[1]
+
+\Procedure {CalculatePower}{$base$, $exponent$}
+    \State $power \leftarrow 1$
+    
+    \For {$i \leftarrow 1, exponent$}
+    \State $power \leftarrow power * base$
+    \EndFor
+    \State \textbf{return} $power$\Comment{It returns the base to the power exponent}
+    \EndProcedure
+\Statex
+
+\Procedure {CalculateFactorial}{$exponent$}
+    \State $fact \leftarrow 1$
+    
+    \For {$i \leftarrow 1, exponent$}
+    \State $fact \leftarrow fact * i$
+    \EndFor
+    \State \textbf{return} $fact$\Comment{It returns the factorial of exponent}
+    \EndProcedure
+\Statex
+
+\State $n \leftarrow \frac{x.3.14}{180}$
+\State $s \leftarrow 0$ 
+\State $flag \leftarrow true$ 
+\State $double \leftarrow output$
+    \For{$i \leftarrow 1,99$}
+    \If{$i \mod 2 \leftarrow ! 0$}
+   \If {$flag \leftarrow true$}
+    \State $output \leftarrow output +\frac{power(n,i)}{factorial(i)}$
+    \State $flag \leftarrow false$
+  \Else
+    \State $output \leftarrow output -\frac{power(n,i)}{factorial(i)}$
+     \State$ flag \leftarrow true$
+     
+     \EndIf
+     \Else
+     \State \textbf{return} 0
+     \EndIf
+    \EndFor
+    \State $s \leftarrow output$
+    \Statex
+    \State $c \leftarrow \sqrt{1-s^{2}}$
+    \Statex
+    $t \leftarrow \frac{s}{c}$
+    \end{algorithmic}
+    \end{algorithm}
+
+
+
+\begin{algorithm}
+
+\caption{Calculate tangent Function using sin and cos function}
+
+\textbf{Require:}  value: $-\infty<x<\infty$\\
+\textbf{Ensure:} $result = \tan(x)$
+\begin{algorithmic}[1]
+
+\Procedure {CalculatePower}{$base$, $exponent$}
+    \State $power \leftarrow 1$
+    
+    \For {$i \leftarrow 1, exponent$}
+    \State $power \leftarrow power * base$
+    \EndFor
+    \State \textbf{return} $power$\Comment{It returns the base to the power exponent}
+    \EndProcedure
+\Statex
+
+\Procedure {CalculateFactorial}{$exponent$}
+    \State $fact \leftarrow 1$
+    
+    \For {$i \leftarrow 1, exponent$}
+    \State $fact \leftarrow fact * i$
+    \EndFor
+    \State \textbf{return} $fact$\Comment{It returns the factorial of exponent}
+    \EndProcedure
+\Statex
+\Procedure{CalculateSin}{n}
+\State $s \leftarrow 0$ 
+\State $flag \leftarrow true$
+\State $double \leftarrow output$
+\For{$i \leftarrow 1,99$}
+   
+   \If {$flag \leftarrow true$}
+    \State $output \leftarrow output +\frac{power(n,i)}{factorial(i)}$
+    \State $flag \leftarrow false$
+  \Else
+    \State $output \leftarrow output -\frac{power(n,i)}{factorial(i)}$
+     \State$ flag \leftarrow true$
+     
+     \EndIf
+    \EndFor
+    \State $sin \leftarrow output$
+    \State \textbf{return} $s$\Comment{It returns the value of sin}
+    \EndProcedure
+\Statex
+\Procedure{CalculateCosin}{n}
+\State $c \leftarrow 0$ 
+\State $flag \leftarrow true$
+\State $double \leftarrow output2$
+\For{$i \leftarrow 1,99$}
+   \If{$i \mod 2 \leftarrow 0$}
+   \If {$flag \leftarrow true$}
+    \State $output2 \leftarrow output2 +\frac{power(n,i)}{factorial(i)}$
+    \State $flag \leftarrow false$
+  \Else
+    \State $output2 \leftarrow output2 -\frac{power(n,i)}{factorial(i)}$
+     \State$ flag \leftarrow true$
+     \EndIf
+     \Else 
+     \State \textbf{return} 0
+     \EndIf
+    \EndFor
+    \State $c \leftarrow output2$
+    \State \textbf{return} $c$\Comment{It returns the value of cos}
+    \EndProcedure
+\Statex
+
+\State $n \leftarrow \frac{x.3.14}{180}$\\
+$t \leftarrow \frac{s}{c}$
+\end{algorithmic}
+\end{algorithm}
+\end{document}
